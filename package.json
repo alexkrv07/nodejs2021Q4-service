@@ -43,6 +43,10 @@
       "npm run lint"
     ]
   },
+  "nodemonConfig": {
+    "ignore": ["src/helpers/*json"],
+    "delay": 2500
+  },
   "dependencies": {
     "cross-env": "7.0.3",
     "dotenv": "10.0.0",
