@@ -3,6 +3,7 @@ const swaggerUI = require('swagger-ui-express');
 const path = require('path');
 const YAML = require('yamljs');
 const userRouter = require('./resources/users/user.router');
+const boardsRouter = require('./resources/boards/boards.router');
 const { StatusCode } = require('./common/constants');
 
 const app = express();
@@ -21,6 +22,7 @@ app.use('/', (req, res, next) => {
 });
 
 app.use('/users', userRouter);
+app.use('/boards', boardsRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -29,7 +31,5 @@ app.use((err, req, res, next) => {
     .send({error: `${err.message}`});
   next();
 });
-
-
 
 module.exports = app;
