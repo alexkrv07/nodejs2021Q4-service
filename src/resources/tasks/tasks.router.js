@@ -13,7 +13,6 @@ router.route('/')
   .post( async (req, res) => {
     const TaskBody = req.body;
     const {boardId} = req.params;
-    // console.log(req.params, 'board' );
     const newTask = await tasksService.createTask(TaskBody, boardId);
     res
       .status(StatusCode.Created)

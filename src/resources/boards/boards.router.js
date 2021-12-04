@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const boardsService = require('./boards.service');
-// const tasksRouter = require('../tasks/tasks.router');
 const tasksService = require('../tasks/tasks.service');
 const { StatusCode } = require('../../common/constants');
 const { checkvalidityUIID } = require('../../common/check-valid-uiid');
