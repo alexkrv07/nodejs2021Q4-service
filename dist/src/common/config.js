@@ -9,7 +9,7 @@ exports.AUTH_MODE = exports.JWT_SECRET_KEY = exports.MONGO_CONNECTION_STRING = e
 const dotenv_1 = __importDefault(require("dotenv"));
 const path_1 = __importDefault(require("path"));
 dotenv_1.default.config({
-    path: path_1.default.join(__dirname, '../../.env')
+    path: path_1.default.join(__dirname, '../../../.env')
 });
 const PORT = process.env;
 exports.PORT = PORT;
